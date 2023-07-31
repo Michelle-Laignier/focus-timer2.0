@@ -1,0 +1,124 @@
+:root {
+    font-size: 62.5%;
+
+    --bg: #121214;
+    --bg-card: #29292E;
+    --bg-card-hover: #0A3442;
+    --color-svg: #C4C4CC;
+    --text-color: #FFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html.light {
+    --bg: #FFF;
+    --bg-card: #E1E1E6;
+    --bg-card-hover: #02799D;
+    --color-svg: #323238;
+    --text-color: #323238;
+}
+
+html.light .moon,
+html:not(.light) .sun {
+    display: none;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    justify-items: center;
+}
+
+.changeTheme {
+    cursor: pointer;
+    position: absolute;
+    right: 6.4rem;
+    top: 6.4rem;
+    transition: 0.3s;
+}
+
+.changeTheme:hover {
+    scale: 1.5;
+}
+
+span {
+    color: var(--text-color);
+    font-size: 12.6rem;
+    font-weight: 500;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.buttons-box button svg path,
+.cards-container button svg path {
+    fill: var(--color-svg);
+}
+
+.buttons-box {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-evenly;
+}
+
+.buttons-box button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons-box button:hover {
+    scale: 1.2;
+}
+
+.cards-container {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 2.4rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem;
+}
+
+.card:hover,
+.card:focus {
+    background: var(--bg-card-hover);
+    cursor: pointer;
+}
+/* criar isso pelo js pra funcionar direito, aqui tem que passar o mouse em cima do traço p/ funcionar
+button svg path:hover,
+button svg path:focus {
+    fill: var(--text-color);
+}*/
+
+.volume {
+    margin-top: 3.2rem;
+}
+
+input[type="range"] {
+    accent-color: var(--text-color);
+    height: 16px;
+    width: 90px;
+}
+
+.hide {
+    display: none;
+}

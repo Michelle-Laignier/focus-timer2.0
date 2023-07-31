@@ -1,0 +1,7 @@
+export const controls = document.querySelector(".buttons-box")
+export const buttonPlay = document.querySelector(".play")
+export const buttonStop = document.querySelector(".stop")
+export const buttonPlus = document.querySelector(".plus-time")
+export const buttonLess = document.querySelector(".less-time")
+export const minutes = document.querySelector("#minutes")
+export const seconds = document.querySelector("#seconds")

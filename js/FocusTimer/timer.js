@@ -3,7 +3,7 @@ import * as elements from "./elements.js"
 console.log(state);
 
 let timerCountdown
-export function contdown () {
+export function countdown () {
     if(state.minutes <= 0 && state.seconds <= 0) {
         state.minutes = 0
         state.seconds = 0
@@ -18,15 +18,27 @@ export function contdown () {
     elements.seconds.textContent = String(state.seconds).padStart(2, "0")
     elements.minutes.textContent = String(state.minutes).padStart(2, "0")
     
-    timerCountdown = setTimeout(() => contdown(), 1000)
+    timerCountdown = setTimeout(() => countdown(), 1000)
 }
 
 export function toggleRunning () {
+    elements.buttonPlay.classList.toggle("hide")
+    elements.buttonPause.classList.toggle("hide")
     state.isRunning = !state.isRunning
 }
 
-export function stop () {
+export function pause () {
     clearTimeout(timerCountdown)
+} 
+
+export function StopAndReset () {
+    location.reload()
+    //pause()
+    /*atualiza só depois que clico no play
+    state.minutes = 25
+    state.seconds = 0*/
+    //elements.buttonPlay.classList.remove("hide")
+    //elements.buttonPause.classList.add("hide")
 }
 
 export function plusFiveMinutes () {
@@ -35,7 +47,6 @@ export function plusFiveMinutes () {
         return
     }
     state.minutes = state.minutes + 5
-    state.seconds = 0
     elements.minutes.textContent = String(state.minutes).padStart(2, "0")
 }
 
@@ -45,6 +56,5 @@ export function lessFiveMinutes () {
         return
     }
     state.minutes = state.minutes - 5
-    state.seconds = 0
     elements.minutes.textContent = String(state.minutes).padStart(2, "0")
 }

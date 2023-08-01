@@ -13,8 +13,10 @@ export function registerControls () {
     })
 }
 
-elements.buttonPlay.addEventListener("click", timer.contdown)
+elements.buttonPlay.addEventListener("click", timer.countdown)
+elements.buttonPause.addEventListener("click", timer.pause)
 elements.buttonPlay.addEventListener("click", timer.toggleRunning)
-elements.buttonStop.addEventListener("click", timer.stop)
+elements.buttonPause.addEventListener("click", timer.toggleRunning)
+elements.buttonStop.addEventListener("click", timer.StopAndReset)
 elements.buttonPlus.addEventListener("click", timer.plusFiveMinutes)
 elements.buttonLess.addEventListener("click", timer.lessFiveMinutes)

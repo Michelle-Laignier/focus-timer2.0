@@ -1,12 +1,14 @@
 import state from "./state.js"
 import * as elements from "./elements.js"
-console.log(state);
+import * as sounds from "./sounds.js"
 
 let timerCountdown
 export function countdown () {
     if(state.minutes <= 0 && state.seconds <= 0) {
         state.minutes = 0
         state.seconds = 0
+        toggleRunning()
+        sounds.buttonKitchenTimer.play()
         return
     }
     
@@ -24,7 +26,6 @@ export function countdown () {
 export function toggleRunning () {
     elements.buttonPlay.classList.toggle("hide")
     elements.buttonPause.classList.toggle("hide")
-    state.isRunning = !state.isRunning
 }
 
 export function pause () {

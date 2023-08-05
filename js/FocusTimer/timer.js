@@ -1,6 +1,6 @@
 import state from "./state.js"
 import * as elements from "./elements.js"
-import * as sounds from "./sounds.js"
+import * as sounds from "../sounds/sounds.js"
 
 let timerCountdown
 export function countdown () {

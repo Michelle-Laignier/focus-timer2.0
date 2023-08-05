@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    .changeTheme {
+        top: 1.4rem
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}

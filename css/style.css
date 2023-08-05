@@ -14,19 +14,6 @@
     padding: 0;
 }
 
-html.light {
-    --bg: #FFF;
-    --bg-card: #E1E1E6;
-    --bg-card-hover: #02799D;
-    --color-svg: #323238;
-    --text-color: #323238;
-}
-
-html.light .moon,
-html:not(.light) .sun {
-    display: none;
-}
-
 body {
     background-color: var(--bg);
     font-family: 'Roboto', sans-serif;
@@ -104,11 +91,17 @@ button {
     background: var(--bg-card-hover);
     cursor: pointer;
 }
-/* criar isso pelo js pra funcionar direito, aqui tem que passar o mouse em cima do traço p/ funcionar
-button svg path:hover,
-button svg path:focus {
+
+.card:hover .path-forest,
+.card:focus .path-forest,
+.card:hover .path-rain,
+.card:focus .path-rain,
+.card:hover .path-restaurant,
+.card:focus .path-restaurant,
+.card:hover .path-fire,
+.card:focus .path-fire {
     fill: var(--text-color);
-}*/
+}
 
 .volume {
     margin-top: 3.2rem;
@@ -116,8 +109,17 @@ button svg path:focus {
 
 input[type="range"] {
     accent-color: var(--text-color);
-    height: 16px;
+    background-color: white;
+    border-radius: 5px;
+    appearance: none;
+    height: 6px;
     width: 90px;
+}
+
+/* Define a cor do polegar (alça deslizante) */
+input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--text-color);
+    cursor: pointer;
 }
 
 .hide {

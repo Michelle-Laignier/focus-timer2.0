@@ -1,5 +1,5 @@
 import { controls } from "./elements.js"
-import * as sounds from "./sounds.js"
+import * as sounds from "../sounds/sounds.js"
 import * as actions from "./actions.js"
 
 export function registerControls () {

@@ -1,0 +1,33 @@
+html.light {
+    --bg: #FFF;
+    --bg-card: #E1E1E6;
+    --bg-card-hover: #02799D;
+    --color-svg: #323238;
+    --text-color: #323238;
+}
+
+html.light .moon,
+html:not(.light) .sun {
+    display: none;
+}
+
+html.light .card:hover .path-forest,
+html.light .card:focus .path-forest,
+html.light .card:hover .path-rain,
+html.light .card:focus .path-rain,
+html.light .card:hover .path-restaurant,
+html.light .card:focus .path-restaurant,
+html.light .card:hover .path-fire,
+html.light .card:focus .path-fire {
+    fill: var(--bg);
+}
+
+html.light input[type="range"] {
+    background-color: var(--text-color);
+}
+
+html.light .card:hover input[type="range"],
+html.light .card:focus input[type="range"] {
+    accent-color: var(--bg);
+    background-color: white;
+}

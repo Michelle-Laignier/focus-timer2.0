@@ -1,6 +1,7 @@
 import * as elements from "../FocusTimer/elements.js"
 import * as volumes from "./volumes.js"
 import * as addSounds from "./addSounds.js"
+import * as focus from "./cardsFocus.js"
 
 export const buttonPressAudio = new Audio("./audio/button-press.wav")
 export const buttonKitchenTimer = new Audio("./audio/kitchen-timer.mp3")
@@ -26,5 +27,10 @@ elements.soundsCards.addEventListener("click", (event) => {
     volumes.rain()
     volumes.restaurant()
     volumes.campFire()
-})
 
+    // pro card ficarem com o focus ativado quando clicar fora dele (se tiver som)
+    focus.forestFocusAndHoverActive(sound)
+    focus.rainFocusAndHoverActive(sound)
+    focus.restaurantFocusAndHoverActive(sound)
+    focus.fireFocusAndHoverActive(sound)
+})

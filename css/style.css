@@ -87,7 +87,7 @@ button {
 }
 
 .card:hover,
-.card:focus {
+.card-focus {
     background: var(--bg-card-hover);
     cursor: pointer;
 }

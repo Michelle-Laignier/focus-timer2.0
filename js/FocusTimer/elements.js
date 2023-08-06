@@ -24,3 +24,8 @@ export const volumeFire = document.querySelector("#volume-fire")
 export const svgFire = document.querySelector(".svg-fire")
 
 export const soundsCards = document.querySelector(".cards-container")
+
+export const pathForest = document.querySelector(".path-forest")
+export const pathRain = document.querySelector(".path-rain")
+export const pathRestaurant = document.querySelector(".path-restaurant")
+export const pathFire = document.querySelector(".path-fire")

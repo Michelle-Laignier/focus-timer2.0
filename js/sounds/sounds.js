@@ -33,4 +33,8 @@ elements.soundsCards.addEventListener("click", (event) => {
     focus.rainFocusAndHoverActive(sound)
     focus.restaurantFocusAndHoverActive(sound)
     focus.fireFocusAndHoverActive(sound)
+
+    // Aqui eu uso toggle para criar a classe 'tocando' ao clicar e,
+    // se ela já existir, deletar essa classe
+    sound.classList.toggle('playing')
 })

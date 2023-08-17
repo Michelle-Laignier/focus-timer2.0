@@ -10,7 +10,16 @@ export function forestFocusAndHoverActive (sound) {
         elements.forest.classList.remove("card-focus")
         elements.pathForest.removeAttribute("style")
         elements.volumeForest.removeAttribute("style")
-    }
+    } 
+    
+    if(sound == elements.forest || sound == elements.svgForest){
+        if(sound.classList.contains('playing')) {
+            elements.forest.classList.remove("card-focus")
+            elements.pathForest.removeAttribute("style")
+            elements.volumeForest.removeAttribute("style")
+            return
+        }
+    }  
 }
 
 export function rainFocusAndHoverActive (sound) {
@@ -23,6 +32,15 @@ export function rainFocusAndHoverActive (sound) {
         elements.pathRain.removeAttribute("style")
         elements.volumeRain.removeAttribute("style")
     }
+
+    if(sound == elements.rain || sound == elements.svgRain){
+        if(sound.classList.contains('playing')) {
+            elements.rain.classList.remove("card-focus")
+            elements.pathRain.removeAttribute("style")
+            elements.volumeRain.removeAttribute("style")
+            return
+        }
+    } 
 }
 
 export function restaurantFocusAndHoverActive (sound) {
@@ -35,6 +53,15 @@ export function restaurantFocusAndHoverActive (sound) {
         elements.pathRestaurant.removeAttribute("style")
         elements.volumeRestaurant.removeAttribute("style")
     }
+
+    if(sound == elements.restaurant || sound == elements.svgRestaurant){
+        if(sound.classList.contains('playing')) {
+            elements.restaurant.classList.remove("card-focus")
+            elements.pathRestaurant.removeAttribute("style")
+            elements.volumeRestaurant.removeAttribute("style")
+            return
+        }
+    } 
 }
 
 export function fireFocusAndHoverActive (sound) {
@@ -47,4 +74,13 @@ export function fireFocusAndHoverActive (sound) {
         elements.pathFire.removeAttribute("style")
         elements.volumeFire.removeAttribute("style")
     }
+
+    if(sound == elements.campFire || sound == elements.svgFire){
+        if(sound.classList.contains('playing')) {
+            elements.campFire.classList.remove("card-focus")
+            elements.pathFire.removeAttribute("style")
+            elements.volumeFire.removeAttribute("style")
+            return
+        }
+    } 
 }
